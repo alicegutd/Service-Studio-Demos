@@ -4492,19 +4492,19 @@
             // After loading screen, show the actual chat interface page
             setTimeout(() => {
                 showEmmaParkerChatInterface();
-            }, 3000); // 3 second loading screen
+            }, 2000); // 2 second loading screen
         }
 
         function showEmmaParkerLoadingScreen() {
             console.log('Showing Emma Parker loading screen');
 
-            // Enable chat mode and collapse sidebar to match Image #1
-            isInChatMode = true;
+            // Keep sidebar expanded for Emma Parker flow
+            isInChatMode = false;
             const sidebar = document.getElementById('expanded-nav');
             if (sidebar) {
-                sidebar.classList.add('sidebar-collapsed');
-                sidebar.style.width = '60px';
-                console.log('Sidebar collapsed for Emma Parker loading screen');
+                sidebar.classList.remove('sidebar-collapsed');
+                sidebar.style.width = '';
+                console.log('Sidebar kept expanded for Emma Parker loading screen');
             }
 
             // Create loading page if it doesn't exist
@@ -4560,11 +4560,11 @@
 
             emmaConversationPage.classList.remove('hidden');
 
-            // Ensure sidebar stays collapsed
+            // Ensure sidebar stays expanded for Emma Parker flow
             const sidebar = document.getElementById('expanded-nav');
             if (sidebar) {
-                sidebar.classList.add('sidebar-collapsed');
-                sidebar.style.width = '60px';
+                sidebar.classList.remove('sidebar-collapsed');
+                sidebar.style.width = '';
             }
 
             // Load Scene 1 using the existing demo structure
@@ -4579,7 +4579,7 @@
             conversationView.innerHTML = `
                 <div class="h-full flex px-6">
                     <!-- Left Column: Emma Parker Chat Window -->
-                    <div class="flex-1 mr-6">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                             <!-- Customer Header -->
                             <div class="border-b border-gray-200 px-4 py-3">
@@ -5362,7 +5362,7 @@
             conversationView.innerHTML = `
                 <div class="h-full flex">
                     <!-- Left Column: Chat Window -->
-                    <div class="flex-1 mr-6">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                         <!-- Customer Header -->
                         <div class="border-b border-gray-200 px-4 py-3">
@@ -5788,7 +5788,7 @@
             conversationView.innerHTML = `
                 <div class="h-full flex">
                     <!-- Left Column: Emma Parker Chat Window -->
-                    <div class="flex-1 mr-6">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                             <!-- Customer Header -->
                             <div class="border-b border-gray-200 px-4 py-3">
