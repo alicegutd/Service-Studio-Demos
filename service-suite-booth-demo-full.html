@@ -4507,6 +4507,9 @@
                 console.log('Sidebar kept expanded for Emma Parker loading screen');
             }
 
+            // Remove selected state from all navigation tabs
+            updateNavigationStates('emma-parker'); // Pass non-existent page ID to deselect all tabs
+
             // Create loading page if it doesn't exist
             let loadingPage = document.getElementById('emma-loading-page');
             if (!loadingPage) {
@@ -4567,6 +4570,9 @@
                 sidebar.style.width = '';
             }
 
+            // Remove selected state from all navigation tabs
+            updateNavigationStates('emma-parker'); // Pass non-existent page ID to deselect all tabs
+
             // Load Scene 1 using the existing demo structure
             loadEmmaParkerScene1();
         }
@@ -4577,9 +4583,9 @@
             // Create the Scene 1 content directly in the demo conversation view
             const conversationView = document.getElementById('demo-conversation-view');
             conversationView.innerHTML = `
-                <div class="h-full flex px-6">
+                <div class="h-full flex justify-center px-6">
                     <!-- Left Column: Emma Parker Chat Window -->
-                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.9);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                             <!-- Customer Header -->
                             <div class="border-b border-gray-200 px-4 py-3">
@@ -5360,9 +5366,9 @@
 
             // Replace loading state with actual conversation content in two-column layout
             conversationView.innerHTML = `
-                <div class="h-full flex">
+                <div class="h-full flex justify-center">
                     <!-- Left Column: Chat Window -->
-                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.9);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                         <!-- Customer Header -->
                         <div class="border-b border-gray-200 px-4 py-3">
@@ -5786,9 +5792,9 @@
             // Create the Scene 1 content directly in the conversation view
             const conversationView = document.getElementById('conversation-view');
             conversationView.innerHTML = `
-                <div class="h-full flex">
+                <div class="h-full flex justify-center">
                     <!-- Left Column: Emma Parker Chat Window -->
-                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.667);">
+                    <div class="mr-6" style="flex: 0 0 calc((100% - 25rem) * 0.9);">
                         <div class="bg-white rounded-lg border border-gray-200 h-full flex flex-col">
                             <!-- Customer Header -->
                             <div class="border-b border-gray-200 px-4 py-3">
