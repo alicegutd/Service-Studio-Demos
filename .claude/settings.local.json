@@ -22,7 +22,9 @@
       "Bash(git remote add:*)",
       "Bash(git fetch:*)",
       "Bash(cat:*)",
-      "Bash(git revert:*)"
+      "Bash(git revert:*)",
+      "Bash(lsof:*)",
+      "Read(//Users/alice.gu/Desktop/Screenshots/**)"
     ],
     "deny": [],
     "ask": []
