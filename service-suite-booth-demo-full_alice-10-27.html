@@ -7182,6 +7182,12 @@
                     }
                     if (conversationView) {
                         conversationView.classList.add('hidden');
+
+                        // Restore padding to chat-content-area when hiding Customer 360
+                        const chatContentArea = document.getElementById('chat-content-area');
+                        if (chatContentArea) {
+                            chatContentArea.classList.add('p-6');
+                        }
                     }
                     if (customerProfileView) {
                         customerProfileView.classList.add('hidden');
@@ -8009,20 +8015,25 @@
             // Show conversation view and populate it with Customer 360 content
             if (conversationView) {
                 conversationView.classList.remove('hidden');
-                conversationView.innerHTML = `
-                    <div class="h-full overflow-y-auto bg-gray-50 p-4">
-                        <div class="w-full">
-                            <h2 class="text-xl font-semibold text-gray-900 mb-6">Customer 360 - Emma Parker</h2>
 
+                // Remove padding from chat-content-area for full-width Customer 360
+                const chatContentArea = document.getElementById('chat-content-area');
+                if (chatContentArea) {
+                    chatContentArea.classList.remove('p-6');
+                }
+
+                conversationView.innerHTML = `
+                    <div class="h-full overflow-y-auto bg-gray-50">
+                        <div class="w-full">
                             <!-- Customer Lens and AI Signals Container -->
-                            <div class="flex" style="height: calc(100vh - 200px);">
+                            <div class="flex gap-4" style="padding: 24px 16px 24px 26px;">
                                 <!-- Customer Lens Panel (70% width) -->
-                                <div style="width: 70%;" class="border-r border-gray-200 p-4 overflow-y-auto" id="chat-customer-lens-content">
+                                <div style="width: 70%;" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6" id="chat-customer-lens-content">
                                     <!-- Customer content will be loaded here -->
                                 </div>
 
                                 <!-- AI Signals Panel (30% width) -->
-                                <div style="width: 30%;" class="p-4 bg-gray-50 overflow-y-auto" id="chat-ai-signals-content">
+                                <div style="width: 30%;" class="p-4 bg-gray-50" id="chat-ai-signals-content">
                                     <!-- AI signals content will be loaded here -->
                                 </div>
                             </div>
