@@ -3839,6 +3839,160 @@
                     </div>
                 </div>
 
+                <!-- Integrations Page -->
+                <div id="integrations-page-test" class="page-content hidden">
+                    <div class="space-y-8 p-6">
+                        <!-- Header -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-3xl font-bold text-gray-900">Select your platform</h1>
+                                <p class="text-gray-600 mt-2">Choose the platform your company uses for support, so Service AI can help you get set up.</p>
+                            </div>
+                            <div class="flex items-center gap-3 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                                <span class="text-sm text-blue-700 font-medium">AI Integration Assistant</span>
+                            </div>
+                        </div>
+
+                        <!-- Featured Platforms -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Zendesk -->
+                            <div class="relative cursor-pointer transform transition-transform hover:scale-105" onclick="showPlatformDetails('zendesk')">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl"></div>
+                                <div class="relative bg-white m-1 rounded-xl p-8 text-center">
+                                    <div class="w-16 h-16 bg-gray-900 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                        <span class="text-white font-bold text-2xl">Z</span>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Zendesk</h3>
+                                    <p class="text-gray-600 text-sm mb-4">Complete setup with tailored deploy steps for every Zendesk support channel</p>
+                                    <div class="flex items-center justify-center gap-4 text-sm text-gray-600">
+                                        <span>✓ Custom onboarding</span>
+                                        <span>✓ Native reporting</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Salesforce -->
+                            <div class="relative cursor-pointer transform transition-transform hover:scale-105" onclick="showPlatformDetails('salesforce')">
+                                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-2xl"></div>
+                                <div class="relative bg-white m-1 rounded-xl p-8 text-center">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Salesforce</h3>
+                                    <p class="text-gray-600 text-sm mb-4">Integrate with Service Cloud for comprehensive customer context and CRM data</p>
+                                    <div class="flex items-center justify-center gap-4 text-sm text-gray-600">
+                                        <span>✓ CRM integration</span>
+                                        <span>✓ Einstein Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Platforms -->
+                        <div>
+                            <h2 class="text-xl font-semibold text-gray-900 mb-6">Use another platform</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <!-- Amazon Connect -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('amazonconnect')">
+                                    <div class="w-12 h-12 bg-orange-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">●</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Amazon Connect</h3>
+                                    <p class="text-gray-600 text-xs">Cloud contact center</p>
+                                </div>
+
+                                <!-- Freshdesk -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('freshdesk')">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">●</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Freshdesk</h3>
+                                    <p class="text-gray-600 text-xs">Customer support software</p>
+                                </div>
+
+                                <!-- Front -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('front')">
+                                    <div class="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">F</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Front</h3>
+                                    <p class="text-gray-600 text-xs">Team inbox platform</p>
+                                </div>
+
+                                <!-- Gorgias -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('gorgias')">
+                                    <div class="w-12 h-12 bg-gray-600 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">G</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Gorgias</h3>
+                                    <p class="text-gray-600 text-xs">Ecommerce helpdesk</p>
+                                </div>
+
+                                <!-- Help Scout -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('helpscout')">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Help Scout</h3>
+                                    <p class="text-gray-600 text-xs">Customer service platform</p>
+                                </div>
+
+                                <!-- HubSpot -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('hubspot')">
+                                    <div class="w-12 h-12 bg-orange-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">H</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">HubSpot</h3>
+                                    <p class="text-gray-600 text-xs">CRM & service hub</p>
+                                </div>
+
+                                <!-- ServiceNow -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('servicenow')">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">ServiceNow</h3>
+                                    <p class="text-gray-600 text-xs">Enterprise service management</p>
+                                </div>
+
+                                <!-- Zoho Desk -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('zohodesk')">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                                        <span class="text-white font-bold text-xl">Z</span>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1">Zoho Desk</h3>
+                                    <p class="text-gray-600 text-xs">Context-aware help desk</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Option -->
+                        <div>
+                            <div class="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer hover:border-blue-500 transition-colors" onclick="showPlatformDetails('other')">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold text-gray-900">Other</h3>
+                                        <p class="text-gray-600 text-sm">Custom integration or different platform</p>
+                                    </div>
+                                    <div class="w-8 h-1 bg-gray-200 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Chat Interface Page -->
                 <div id="chat-interface-page" class="page-content hidden">
                     <div class="chat-interface-layout flex">
@@ -4274,271 +4428,6 @@
         </main>
     </div>
 
-    <!-- INTEGRATIONS PAGE -->
-    <div id="integrations-page-test" class="page-content hidden" style="position: fixed; top: 0; left: 240px; right: 0; bottom: 0; background-color: #f8fafc; z-index: 1000; padding: 24px 32px; overflow-y: auto;">
-        <div class="space-y-8">
-            <!-- Header -->
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <div>
-                    <h1 style="font-size: 30px; font-weight: bold; color: #111827; margin: 0;">Select your platform</h1>
-                    <p style="color: #6b7280; margin-top: 8px; font-size: 16px;">Choose the platform your company uses for support, so Service AI can help you get set up.</p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 12px; background-color: #dbeafe; border: 1px solid #93c5fd; border-radius: 8px; padding: 8px 12px;">
-                    <div style="width: 8px; height: 8px; background-color: #3b82f6; border-radius: 50%; animation: pulse 2s infinite;"></div>
-                    <span style="font-size: 14px; color: #1e40af; font-weight: 500;">AI Integration Assistant</span>
-                </div>
-            </div>
-
-            <!-- Single Column Layout (Full Width) -->
-            <div style="width: 100%;">
-                <!-- Left Column: Platform Selection -->
-                <div style="display: flex; flex-direction: column; gap: 32px;">
-                    <!-- Featured Platforms -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                        <!-- Zendesk -->
-                        <div style="position: relative; cursor: pointer; transform: scale(1); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="showPlatformDetails('zendesk')">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to right, #3b82f6, #2563eb); border-radius: 16px;"></div>
-                            <div style="position: relative; background-color: white; margin: 4px; border-radius: 12px; padding: 32px; text-align: center;">
-                                <div style="width: 64px; height: 64px; background-color: #111827; border-radius: 8px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
-                                    <span style="color: white; font-weight: bold; font-size: 24px;">Z</span>
-                                </div>
-                                <h3 style="font-size: 24px; font-weight: bold; color: #111827; margin: 0 0 8px 0;">Zendesk</h3>
-                                <p style="color: #6b7280; font-size: 14px; margin: 0 0 16px 0;">Complete setup with tailored deploy steps for every Zendesk support channel</p>
-                                <div style="display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 14px; color: #6b7280;">
-                                    <span>✓ Custom onboarding</span>
-                                    <span>✓ Native reporting</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Salesforce -->
-                        <div style="position: relative; cursor: pointer; transform: scale(1); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="showPlatformDetails('salesforce')">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to right, #06b6d4, #0891b2); border-radius: 16px;"></div>
-                            <div style="position: relative; background-color: white; margin: 4px; border-radius: 12px; padding: 32px; text-align: center;">
-                                <div style="width: 64px; height: 64px; background-color: #3b82f6; border-radius: 8px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-size: 24px; font-weight: bold; color: #111827; margin: 0 0 8px 0;">Salesforce</h3>
-                                <p style="color: #6b7280; font-size: 14px; margin: 0 0 16px 0;">Integrate with Service Cloud for comprehensive customer context and CRM data</p>
-                                <div style="display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 14px; color: #6b7280;">
-                                    <span>✓ CRM integration</span>
-                                    <span>✓ Einstein Analytics</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other Platforms -->
-                    <div>
-                        <h2 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0 0 24px 0;">Use another platform</h2>
-                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-                            <!-- Amazon Connect -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('amazonconnect')">
-                                <div style="width: 48px; height: 48px; background-color: #fed7aa; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; color: #ea580c;" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Amazon Connect</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Cloud contact center</p>
-                            </div>
-
-                            <!-- Freshdesk -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#10b981'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('freshdesk')">
-                                <div style="width: 48px; height: 48px; background-color: #dcfce7; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <div style="width: 24px; height: 24px; background-color: #16a34a; border-radius: 50%;"></div>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Freshdesk</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Customer support software</p>
-                            </div>
-
-                            <!-- Front -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#a855f7'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('front')">
-                                <div style="width: 48px; height: 48px; background-color: #f3e8ff; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <span style="color: #9333ea; font-weight: bold; font-size: 18px;">F</span>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Front</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Team inbox platform</p>
-                            </div>
-
-                            <!-- Gorgias -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#6b7280'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('gorgias')">
-                                <div style="width: 48px; height: 48px; background-color: #f3f4f6; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <span style="color: #6b7280; font-weight: bold; font-size: 18px;">G</span>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Gorgias</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Ecommerce helpdesk</p>
-                            </div>
-
-                            <!-- Help Scout -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#3b82f6'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('helpscout')">
-                                <div style="width: 48px; height: 48px; background-color: #dbeafe; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; color: #3b82f6;" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 9.74s9-4.19 9-9.74V7l-10-5z"/>
-                                    </svg>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Help Scout</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Customer service platform</p>
-                            </div>
-
-                            <!-- HubSpot -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#ea580c'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('hubspot')">
-                                <div style="width: 48px; height: 48px; background-color: #fed7aa; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <span style="color: #ea580c; font-weight: bold; font-size: 18px;">H</span>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">HubSpot</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">CRM & service hub</p>
-                            </div>
-
-                            <!-- ServiceNow -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#10b981'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('servicenow')">
-                                <div style="width: 48px; height: 48px; background-color: #dcfce7; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <div style="width: 24px; height: 24px; background-color: #16a34a; border-radius: 4px;"></div>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">ServiceNow</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Enterprise service management</p>
-                            </div>
-
-                            <!-- Zoho Desk -->
-                            <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; text-align: center; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#10b981'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('zohodesk')">
-                                <div style="width: 48px; height: 48px; background-color: #dcfce7; border-radius: 8px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
-                                    <span style="color: #16a34a; font-weight: bold; font-size: 18px;">Z</span>
-                                </div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 14px;">Zoho Desk</h3>
-                                <p style="font-size: 12px; color: #6b7280; margin: 4px 0 0 0;">Context-aware help desk</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other Option -->
-                    <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; cursor: pointer; transition: border-color 0.2s;" onmouseover="this.style.borderColor='#6b7280'" onmouseout="this.style.borderColor='#e5e7eb'" onclick="showPlatformDetails('other')">
-                        <div style="display: flex; align-items: center; gap: 16px;">
-                            <div style="width: 48px; height: 48px; background-color: #f3f4f6; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                                <svg style="width: 24px; height: 24px; color: #6b7280;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="font-weight: 500; color: #111827; margin: 0; font-size: 16px;">Other</h3>
-                                <p style="font-size: 14px; color: #6b7280; margin: 0;">Custom integration or different platform</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI Setup Assistant -->
-                    <div style="background: linear-gradient(to right, #faf5ff, #f0f4ff); border: 1px solid #d8b4fe; border-radius: 8px; padding: 24px;">
-                        <div style="display: flex; align-items: flex-start; gap: 16px;">
-                            <div style="width: 40px; height: 40px; background-color: #7c3aed; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <svg style="width: 24px; height: 24px; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                </svg>
-                            </div>
-                            <div style="flex: 1;">
-                                <h3 style="font-weight: 600; color: #111827; margin: 0 0 8px 0;">AI-Powered Setup</h3>
-                                <p style="color: #374151; margin: 0 0 16px 0;">Once you select your platform, our AI will:</p>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 14px;">
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <svg style="width: 16px; height: 16px; color: #10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span style="color: #374151;">Analyze your existing knowledge base</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <svg style="width: 16px; height: 16px; color: #10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span style="color: #374151;">Import your support history and patterns</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <svg style="width: 16px; height: 16px; color: #10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span style="color: #374151;">Configure optimal settings for your team</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <svg style="width: 16px; height: 16px; color: #10b981;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span style="color: #374151;">Set up gradual deployment with safety controls</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Currently Connected -->
-                    <div style="background-color: white; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                        <div style="padding: 24px; border-bottom: 1px solid #e5e7eb;">
-                            <h2 style="font-size: 20px; font-weight: 600; color: #111827; margin: 0;">Currently Connected</h2>
-                            <p style="color: #6b7280; font-size: 14px; margin: 4px 0 0 0;">Manage your existing integrations</p>
-                        </div>
-                        <div style="padding: 24px;">
-                            <div style="display: flex; flex-direction: column; gap: 16px;">
-                                <!-- Connected Zendesk -->
-                                <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid #bbf7d0; border-radius: 8px; background-color: #f0fdf4;">
-                                    <div style="display: flex; align-items: center; gap: 12px;">
-                                        <div style="width: 40px; height: 40px; background-color: #111827; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                                            <span style="color: white; font-weight: bold;">Z</span>
-                                        </div>
-                                        <div>
-                                            <h3 style="font-weight: 600; color: #111827; margin: 0;">Zendesk</h3>
-                                            <p style="font-size: 14px; color: #6b7280; margin: 0;">Connected to https://treasuredata.zendesk.com</p>
-                                            <div style="display: flex; align-items: center; gap: 16px; font-size: 12px; color: #6b7280; margin-top: 4px;">
-                                                <span>247 articles synced</span>
-                                                <span>•</span>
-                                                <span>Last sync: 2 minutes ago</span>
-                                                <span>•</span>
-                                                <span style="color: #16a34a;">94% accuracy</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <span style="font-size: 12px; background-color: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 9999px;">Active</span>
-                                        <button style="color: #9ca3af; background: none; border: none; cursor: pointer;">
-                                            <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- Slack Integration -->
-                                <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;">
-                                    <div style="display: flex; align-items: center; gap: 12px;">
-                                        <div style="width: 40px; height: 40px; background-color: #f3e8ff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                                            <svg style="width: 20px; height: 20px; color: #9333ea;" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M5.5 8.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 style="font-weight: 600; color: #111827; margin: 0;">Slack</h3>
-                                            <p style="font-size: 14px; color: #6b7280; margin: 0;">Team notifications and escalation alerts</p>
-                                            <div style="display: flex; align-items: center; gap: 16px; font-size: 12px; color: #6b7280; margin-top: 4px;">
-                                                <span>3 channels configured</span>
-                                                <span>•</span>
-                                                <span>156 notifications sent</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 8px;">
-                                        <span style="font-size: 12px; background-color: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 9999px;">Active</span>
-                                        <button style="color: #9ca3af; background: none; border: none; cursor: pointer;">
-                                            <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         function showPage(pageId) {
