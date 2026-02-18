@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+
+# Claude Code config
+.claude/
+
+# Personal / private folders
+Comm-Coach exports/
+Performance Reviews/
+MSA/
+
+# Misc files
+-
+tbill_analysis.py
+tbill_analysis_v2.py
+tbill_vs_tnote_comparison.py
+
+# Downloaded files
+2025 Service AI Suite Work/downloaded_file
