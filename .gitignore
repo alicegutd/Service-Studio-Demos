@@ -3,6 +3,7 @@
 
 # Claude Code config
 .claude/
+CLAUDE.md
 
 # Personal / private folders
 Comm-Coach exports/
