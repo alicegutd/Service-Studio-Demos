@@ -1,40 +1,26 @@
-# CLAUDE.md
+# CLAUDE.md — Service AI Suite Prototypes
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This repo contains prototype demos for the Service AI Suite, built for keynotes, booth demos, and internal presentations.
 
-## Repository Structure
+## What's here
 
-This is a minimal project containing a single HTML file that demonstrates a Service AI Suite for customer support interactions.
+### Standalone HTML demos (no dependencies, open in browser)
+- `service-suite-day-1-keynote.html` — Keynote presentation demo
+- `service-suite-day-1-keynote-prep.html` — Keynote prep version
+- `service-suite-booth-demo.html` — Booth demo (compact)
+- `service-suite-booth-demo-full.html` — Booth demo (full)
+- `service-suite-booth-demo-full_alice-10-27.html` — Booth demo snapshot (Oct 27)
+- `ss-booth-index.html` — Booth demo index/launcher
+- `index.html` — GitHub Pages landing page
 
-## Main File
+### React/Next.js prototype
+- `service-studio/` — More complete Service Studio prototype with pages for conversations, customers, integrations, and AI settings. Uses Next.js + Tailwind.
 
-- `service-ai-suite-demo.html` - A standalone HTML demo showcasing an AI-powered customer service chat interface with features like:
-  - Multi-scene conversation simulation (6 scenes)
-  - Customer identification and profile panels
-  - AI insights and analysis tracking
-  - Human-in-the-loop approval workflows
-  - Auto-play functionality for demonstrations
+### Supporting files
+- `design-tokens.json` — Design token definitions
+- `components/` — Shared React components (CustomerProfileCard)
+- `customers/` — Customer page components
 
-## Working with this Project
-
-### Viewing the Demo
-To view the demo, simply open `service-ai-suite-demo.html` in a web browser:
-```bash
-open service-ai-suite-demo.html
-```
-
-### File Structure
-The project is self-contained with no external dependencies:
-- All CSS is embedded in `<style>` tags
-- All JavaScript is embedded in `<script>` tags
-- No build process or package management required
-
-### Key Components
-The HTML file contains several key interactive elements:
-- Scene navigation controls (Previous/Next/Auto Play)
-- Customer information panel with dynamic loading states
-- AI insights panel that tracks conversation analysis
-- Modal dialogs for human approval workflows
-- Animated chat interface with realistic conversation flow
-
-This is a demonstration/prototype file rather than a production application, so modifications should focus on enhancing the demo experience or adding new demonstration scenarios.
+## Remotes
+- `origin` → `alicegutd/Service-Studio-Demos` (main repo)
+- `ss-booth` → `alicegutd/SS-booth-demo` (booth demo subset)
