@@ -3,27 +3,6 @@
 
 # Claude Code config
 .claude/
-CLAUDE.md
-
-# Personal / private folders
-Comm-Coach exports/
-Reviews/
-MSA/
-Weekly-Status/
-Other/
-Design to Market (DTM)/
-Hiring/
-Business Travel/
-Apex Feedback Council/
-AI Experience Center/
-Session-Exports/
-
-# Misc files
--
-tbill_analysis.py
-tbill_analysis_v2.py
-tbill_vs_tnote_comparison.py
-awesome-design-md/
 
 # Downloaded files
-2025 Service AI Suite Work/downloaded_file
+downloaded_file
